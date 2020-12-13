@@ -20,8 +20,9 @@ int main(int argc, char* argv[])
 			throw;
 		}
 		tmp = "source\\_posts\\";
-		tmp += *argv[1];
+		tmp += argv[1];
 		path = tmp + ".md";
+		cout << path;
 		if (!_access(path.c_str(), 0)) {
 			cout << "存在目标文件，程序退出。" << endl;
 			throw;
@@ -53,7 +54,7 @@ int main(int argc, char* argv[])
 		while (getline(instream, tmp)) {
 			if (tmp.find("{{ title }}") != -1) {
 				tmp = "title: ";
-				tmp+=*argv[1];
+				tmp+=argv[1];
 			}
 			else if (tmp.find("{{ date }}") != -1)
 			{
