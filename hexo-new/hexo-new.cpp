@@ -19,8 +19,8 @@ int main(int argc, char* argv[])
 			cout << "请指定新建文件名。" << endl;
 			throw;
 		}
-		tmp = "abc";
-		tmp = tmp + *argv[1];
+		tmp = "source\\_posts";
+		tmp += *argv[1];
 		path = tmp + ".md";
 		if (!_access(path.c_str(), 0)) {
 			cout << "存在目标文件，程序退出。" << endl;
