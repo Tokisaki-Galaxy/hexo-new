@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 			cout << "请指定新建文件名。" << endl;
 			throw;
 		}
-		tmp = "source\\_posts";
+		tmp = "source\\_posts\\";
 		tmp += *argv[1];
 		path = tmp + ".md";
 		if (!_access(path.c_str(), 0)) {
